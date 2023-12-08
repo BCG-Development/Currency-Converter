@@ -1,18 +1,20 @@
-## Exchange Rate Retrieval Script
+# Currency Exchange Rate Retrieval Script
 
-This Python script utilizes the Free Currency API to fetch and display the exchange rate between two specified currencies.
+This Python script utilizes the [Free Currency API](https://freecurrencyapi.com/) to fetch and display exchange rates for a specified base currency against all other currencies.
 
-### How it works:
+## How it works:
 
-1. The script prompts the user to input the base currency code (e.g., USD) and the target currency code (e.g., EUR).
-2. It then sends a request to the Free Currency API, providing the API key and the base currency.
-3. Upon successful retrieval, it extracts the exchange rate for the target currency from the API response.
-4. The script displays the obtained exchange rate in the format: `1 [base_currency] = [exchange_rate] [target_currency]`.
+1. The script prompts the user to input the base currency code (e.g., USD).
+2. It loads the Free Currency API key from the `.env` file.
+3. It then sends a request to the [Free Currency API](https://freecurrencyapi.com/), providing the API key and the base currency.
+4. Upon successful retrieval, it filters the exchange rates for the given base currency from the API response.
+5. The script creates a Pandas DataFrame with the obtained exchange rates, including the base and target currencies.
+6. Finally, it displays the DataFrame showing the exchange rates.
 
-### Usage:
+## Usage:
 
-1. Replace “YOUR_API_KEY” with your actual Free Currency API key.
-2. Run the script, and it will prompt you to input the base and target currencies.
-3. It will then display the corresponding exchange rate.
+1. Replace "YOUR_API_KEY" in the `.env` file with your actual Free Currency API key.
+2. Run the script, and it will prompt you to input the base currency.
+3. It will then fetch and display the exchange rates against all other currencies.
 
-Note: Ensure you have the ‘requests’ library installed (`pip install requests`) before running the script.
+**Note:** Ensure you have the 'requests', 'os', 'dotenv', and 'pandas' libraries installed (`pip install requests os-dotenv pandas`) before running the script.
