@@ -18,3 +18,7 @@ This Python script utilizes the [Free Currency API](https://freecurrencyapi.com/
 3. It will then fetch and display the exchange rates against all other currencies.
 
 **Note:** Ensure you have the 'requests', 'os', 'dotenv', and 'pandas' libraries installed (`pip install requests os-dotenv pandas`) before running the script.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
